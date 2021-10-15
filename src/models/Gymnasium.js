@@ -6,6 +6,7 @@ class Gymnasium extends Model {
     super.init(
       {
         price: Sequelize.STRING,
+        image: Sequelize.STRING,
       },
       { sequelize,
         tableName: 'gymnasium', }
@@ -13,7 +14,7 @@ class Gymnasium extends Model {
   }
 
   static associate(models) {
-    this.belongsTo( models.Company, { foreignKey: 'company_id'} )
+    this.belongsTo( models.Company, { foreignKey: 'company_id'})
   }
 }
 
