@@ -15,6 +15,10 @@ const StructureController = require('./Controllers/StructureController');
 const routes = express.Router();
 const upload = multer(multerConfig)
 
+routes.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 // Cadastro e edição de usuários
 
 routes.post('/users', UserController.store);
